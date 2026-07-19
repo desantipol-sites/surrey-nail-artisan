@@ -1468,13 +1468,25 @@ h2 em {
   }
 
   .site-footer {
-    grid-template-columns: 1fr;
-    gap: 22px;
-    padding: 44px 18px 90px;
+    grid-template-columns: 120px minmax(0, 1fr);
+    align-items: center;
+    gap: 18px 22px;
+    padding: 30px 18px 90px;
   }
 
   .footer-brand {
-    width: 168px;
+    width: 120px;
+  }
+
+  .site-footer > div:not(.footer-links) {
+    align-self: center;
+  }
+
+  .site-footer .footer-links {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 24px;
   }
 
   .mobile-book {
