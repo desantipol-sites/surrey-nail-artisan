@@ -1,0 +1,141 @@
+/*
+ * Parallel colour-flow concept.
+ * This stylesheet is inert unless the page is opened with ?gradient=1.
+ */
+
+.gradient-preview body {
+  background: #eef2e9;
+}
+
+.gradient-preview .site-header {
+  background: rgba(246, 251, 244, 0.88);
+}
+
+/* Homepage: every section begins where the previous section ends. */
+.gradient-preview .home-hero {
+  background: linear-gradient(180deg, #f6fbf4 0%, #eef2e8 100%);
+}
+
+.gradient-preview .trust-strip {
+  background: #eef2e8;
+}
+
+.gradient-preview .work-showcase {
+  background: linear-gradient(180deg, #eef2e8 0%, #f5efe8 100%);
+}
+
+.gradient-preview .medical-feature {
+  background: linear-gradient(180deg, #f5efe8 0%, #e2ebe0 100%);
+}
+
+.gradient-preview .medical-image-detail {
+  border-color: #e7e9df;
+}
+
+.gradient-preview .services {
+  background: linear-gradient(180deg, #e2ebe0 0%, #f2ece5 100%);
+}
+
+.gradient-preview .service-collage-detail {
+  border-color: #eee9e1;
+}
+
+.gradient-preview .private-studio {
+  background: linear-gradient(180deg, #f2ece5 0%, #edf2e9 100%);
+}
+
+.gradient-preview .booking-panel {
+  background: linear-gradient(180deg, #edf2e9 0%, #35513f 24%, #223d31 100%);
+}
+
+.gradient-preview .site-footer {
+  border-color: rgba(246, 251, 244, 0.16);
+  background: #223d31;
+  color: rgba(246, 251, 244, 0.68);
+}
+
+.gradient-preview .site-footer .footer-brand,
+.gradient-preview .site-footer a:hover,
+.gradient-preview .site-footer a:focus-visible {
+  color: var(--paper);
+}
+
+/* Medical pedicure: a cooler, more clinical version of the same flow. */
+.gradient-preview .medical-page {
+  background: #dfe7df;
+}
+
+.gradient-preview .medical-header {
+  background: rgba(243, 244, 237, 0.89);
+}
+
+.gradient-preview .medical-hero {
+  background: linear-gradient(180deg, #f3f4ed 0%, #e5ebe2 100%);
+}
+
+.gradient-preview .medical-intro {
+  background: linear-gradient(180deg, #e5ebe2 0%, #eee9df 100%);
+}
+
+.gradient-preview .treatments {
+  background: linear-gradient(180deg, #eee9df 0%, #e6ebe3 100%);
+}
+
+.gradient-preview .treatment-card:not(.featured-treatment) {
+  background: rgba(248, 246, 239, 0.72);
+  backdrop-filter: blur(3px);
+}
+
+.gradient-preview .medical-environment {
+  background: linear-gradient(180deg, #e6ebe3 0%, #edf1ea 100%);
+}
+
+.gradient-preview .expect {
+  background: linear-gradient(180deg, #edf1ea 0%, #dfe7df 100%);
+}
+
+.gradient-preview .medical-trust {
+  background: linear-gradient(180deg, #dfe7df 0%, #315043 22%, #1d3930 100%);
+}
+
+.gradient-preview .medical-footer {
+  background: #1d3930;
+}
+
+@media (max-width: 820px) {
+  .gradient-preview .mobile-book a {
+    transform-origin: center;
+    animation: gradient-preview-book-prompt 10s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+    will-change: transform, box-shadow;
+  }
+}
+
+@keyframes gradient-preview-book-prompt {
+  0%,
+  90%,
+  100% {
+    transform: translateY(0) scale(1);
+    box-shadow: 0 0 0 0 rgba(246, 251, 244, 0);
+  }
+
+  92% {
+    transform: translateY(-2px) scale(1.025);
+    box-shadow: 0 6px 18px rgba(246, 251, 244, 0.24);
+  }
+
+  95% {
+    transform: translateY(0) scale(0.99);
+    box-shadow: 0 2px 8px rgba(246, 251, 244, 0.12);
+  }
+
+  98% {
+    transform: translateY(-1px) scale(1.012);
+    box-shadow: 0 4px 12px rgba(246, 251, 244, 0.18);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-preview .mobile-book a {
+    animation: none;
+  }
+}

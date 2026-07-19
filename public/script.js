@@ -2,6 +2,18 @@ const header = document.querySelector("[data-header]");
 const menuButton = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 
+if (document.documentElement.classList.contains("gradient-preview")) {
+  document.querySelectorAll('a[href]').forEach((link) => {
+    const url = new URL(link.href, window.location.href);
+    const isLocalPage = url.origin === window.location.origin && url.pathname.endsWith(".html");
+
+    if (isLocalPage) {
+      url.searchParams.set("gradient", "1");
+      link.href = url.href;
+    }
+  });
+}
+
 function updateHeader() {
   if (!header) return;
   header.classList.toggle("is-scrolled", window.scrollY > 18);
