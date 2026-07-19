@@ -3,10 +3,207 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Surrey Nail Artisan</title>
+    <meta name="description" content="Private one-to-one nail, pedicure and specialist foot care in Hampton, Surrey.">
+    <title>Surrey Nail Artisan | Private Nail &amp; Foot Care in Hampton</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <h1>Surrey Nail Artisan</h1>
-    <p>Our new website is being prepared.</p>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Surrey Nail Artisan home">
+        <img src="assets/surrey-nail-artisan-logo.png" alt="Surrey Nail Artisan">
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#services">Nails &amp; pedicure</a>
+        <a class="nav-highlight" href="medical-pedicure.html">Medical pedicure</a>
+        <a href="#private-studio">The studio</a>
+      </nav>
+      <div class="header-actions">
+        <a class="button button-small" href="https://www.surreynailartisan.co.uk/loading-booking">Book now</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+      </div>
+      <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden>
+        <a href="#services">Nails &amp; pedicure</a>
+        <a href="medical-pedicure.html">Medical pedicure</a>
+        <a href="#private-studio">The studio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero home-hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Private studio · Hampton</p>
+          <h1>Beautiful nails.<br>Thoughtful foot care.<br><em>Entirely your time.</em></h1>
+          <p class="hero-intro">A calm, one-to-one appointment with Natalia Pol—created around careful work, premium products and your comfort.</p>
+          <div class="button-row">
+            <a class="button" href="https://www.surreynailartisan.co.uk/loading-booking">Book an appointment</a>
+            <a class="text-link" href="#services">Explore services <span aria-hidden="true">↘</span></a>
+          </div>
+        </div>
+        <figure class="hero-media real-work-hero">
+          <img src="assets/real-grey-manicure.jpeg" alt="Grey manicure created by Natalia Pol at Surrey Nail Artisan">
+          <figcaption>Real work by Natalia Pol</figcaption>
+        </figure>
+      </section>
+
+      <section class="trust-strip trust-strip-wide" aria-label="Studio benefits">
+        <p><span>01</span> One client at a time</p>
+        <p><span>02</span> Natural-looking results</p>
+        <p><span>03</span> Long-lasting through high-quality products</p>
+        <p><span>04</span> Certified Foot Health Professional</p>
+      </section>
+
+      <section class="work-showcase section-pad" aria-labelledby="work-title">
+        <div class="showcase-heading">
+          <p class="eyebrow">Natalia Pol's work</p>
+          <h2 id="work-title">Beautiful results,<br><em>made to be lived in.</em></h2>
+          <p>Meticulous preparation, thoughtful colour and a finish chosen for you—not simply for the trend.</p>
+        </div>
+        <div class="work-grid">
+          <figure class="work-tile work-tile-tall">
+            <img src="assets/real-sage-manicure.jpg" alt="Sage green manicure with delicate gold detail">
+            <figcaption>Gel manicure</figcaption>
+          </figure>
+          <figure class="work-tile">
+            <img src="assets/real-blue-manicure.jpg" alt="Deep blue shimmer manicure created by Natalia Pol">
+            <figcaption>Colour &amp; finish</figcaption>
+          </figure>
+          <figure class="work-tile">
+            <img src="assets/real-burgundy-pedicure.jpg" alt="Burgundy gel pedicure with subtle heart detail">
+            <figcaption>Gel pedicure</figcaption>
+          </figure>
+          <figure class="work-tile work-tile-soft">
+            <img src="assets/salon-ritual.jpeg" alt="Soft neutral salon ritual details">
+            <figcaption>A calm appointment</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="medical-feature section-pad" aria-labelledby="medical-title">
+        <div class="medical-feature-images">
+          <figure class="medical-image-main">
+            <img src="assets/natalia-foot-care.jpeg" alt="Natalia Pol providing professional foot care in her private Hampton studio">
+          </figure>
+          <figure class="medical-image-detail">
+            <img src="assets/medical-treatment-nails.jpeg" alt="Detailed professional toenail care">
+          </figure>
+          <span class="image-note">Professional care, privately delivered</span>
+        </div>
+        <div class="medical-copy">
+          <p class="eyebrow">Now at Surrey Nail Artisan</p>
+          <h2 id="medical-title">Medical pedicure,<br><em>with time and purpose.</em></h2>
+          <p class="lead">Professional foot care for comfort, confidence and healthier-looking feet—provided in Natalia Pol's quiet, appointment-only Hampton studio.</p>
+          <ul class="concern-list" aria-label="Conditions and concerns supported">
+            <li>Thickened or difficult nails</li>
+            <li>Corns, calluses &amp; hard skin</li>
+            <li>Ingrown nail support</li>
+            <li>Verrucae &amp; fungal concerns</li>
+            <li>Diabetic foot assessment</li>
+          </ul>
+          <div class="button-row">
+            <a class="button button-dark" href="medical-pedicure.html">Discover medical pedicure</a>
+            <a class="text-link" href="https://www.surreynailartisan.co.uk/loading-booking">Book an appointment <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="services section-pad" id="services" aria-labelledby="services-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Nails &amp; pedicure</p>
+            <h2 id="services-title">Care that looks beautiful<br><em>and lasts beautifully.</em></h2>
+          </div>
+          <p>Thoughtful treatments, meticulous preparation and a finish tailored to you.</p>
+        </div>
+        <div class="service-layout service-layout-wide">
+          <div class="service-list service-catalogue">
+            <a class="service-row" href="https://www.surreynailartisan.co.uk/prices/hands-treatment">
+              <span><strong>Hands treatment</strong><small>Natural-looking classic, IBX &amp; gel manicure</small></span>
+              <span class="service-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="service-row" href="https://www.surreynailartisan.co.uk/prices/feet-treatment">
+              <span><strong>Feet treatment</strong><small>Classic, gel &amp; luxury pedicure</small></span>
+              <span class="service-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="service-row" href="https://www.surreynailartisan.co.uk/prices/hands-feet-packages">
+              <span><strong>Hands &amp; feet packages</strong><small>Beautifully paired appointments</small></span>
+              <span class="service-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="service-row" href="https://www.surreynailartisan.co.uk/prices/pedicure-kart">
+              <span><strong>KART pedicure</strong><small>Targeted natural and organic foot care</small></span>
+              <span class="service-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="service-row service-row-secondary" href="https://www.surreynailartisan.co.uk/prices/eyelash-eyebrows">
+              <span><strong>Eyelash &amp; eyebrows</strong><small>Natural-looking, lasting definition</small></span>
+              <span class="service-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="service-row service-row-secondary" href="https://www.surreynailartisan.co.uk/prices/lash-lift">
+              <span><strong>Lash lift</strong><small>Low-maintenance lift and definition</small></span>
+              <span class="service-arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="service-row service-row-medical" href="medical-pedicure.html">
+              <span><strong>Medical pedicure</strong><small>Specialist care for the health of your feet</small></span>
+              <span class="service-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="service-collage" id="service-collage" aria-label="Natural manicure and pedicure results">
+            <figure class="service-collage-main">
+              <img src="assets/natural-manicure.jpg" alt="Natural pale manicure created by Natalia Pol">
+            </figure>
+            <figure class="service-collage-detail">
+              <img src="assets/coral-pedicure.jpg" alt="Coral gel pedicure created by Natalia Pol">
+            </figure>
+            <span class="service-collage-note">Natural-looking. Long-lasting.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="private-studio section-pad" id="private-studio" aria-labelledby="studio-title">
+        <figure class="studio-photo">
+          <img src="assets/hampton-studio.jpg" alt="The private Surrey Nail Artisan treatment room in Hampton">
+          <figcaption>The Hampton studio</figcaption>
+        </figure>
+        <div class="studio-copy">
+          <p class="script-label">The luxury of privacy</p>
+          <h2 id="studio-title">A salon appointment<br>that feels <em>personal.</em></h2>
+          <p class="lead">No waiting clients. No busy room. Natalia Pol welcomes one person at a time, allowing every detail of your treatment to receive her full attention.</p>
+          <div class="studio-values">
+            <article><span>01</span><h3>Unhurried</h3><p>Your appointment is reserved for you, with time to understand what you need.</p></article>
+            <article><span>02</span><h3>Immaculate</h3><p>Careful hygiene, sterilised instruments and disposable materials where appropriate.</p></article>
+            <article><span>03</span><h3>Considered</h3><p>Premium products, thoughtful advice and a result designed to feel like you.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking-panel section-pad" id="contact">
+        <p class="eyebrow">Your appointment</p>
+        <h2>Ready for a little time<br><em>that is entirely yours?</em></h2>
+        <p>Private nail and foot care in Hampton, by appointment only.</p>
+        <a class="button button-light" href="https://www.surreynailartisan.co.uk/loading-booking">Book now</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="index.html">Surrey Nail Artisan</a>
+      <div><p>Private studio in Hampton, TW12</p><p>Appointments with Natalia Pol</p></div>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/surreynailartisan/">Instagram</a>
+        <a href="medical-pedicure.html">Medical pedicure</a>
+        <a href="https://www.surreynailartisan.co.uk/loading-booking">Book online</a>
+      </div>
+    </footer>
+
+    <div class="mobile-book" aria-label="Quick booking">
+      <span>Private appointments in Hampton</span>
+      <a href="https://www.surreynailartisan.co.uk/loading-booking">Book now</a>
+    </div>
   </body>
 </html>
