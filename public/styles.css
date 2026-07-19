@@ -11,7 +11,7 @@
   --line: rgba(29, 33, 30, 0.14);
   --white: #fff;
   --radius: 2px;
-  --serif: "Bodoni Moda", "Bodoni 72", Didot, Georgia, serif;
+  --serif: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   --sans: "DM Sans", "Helvetica Neue", Arial, sans-serif;
 }
 
@@ -63,7 +63,7 @@ figure {
 h1,
 h2 {
   font-family: var(--serif);
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: -0.035em;
   line-height: 1.06;
 }
@@ -1960,6 +1960,37 @@ h2 {
     transform: none;
   }
 
+  .mobile-book a::after {
+    animation: none;
+  }
+}
+
+/* Regular light sweep across every booking action */
+.button[href*="loading-booking"],
+.mobile-book a {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.button[href*="loading-booking"]::after,
+.mobile-book a::after {
+  position: absolute;
+  z-index: 1;
+  top: -45%;
+  bottom: -45%;
+  left: -48%;
+  width: 30%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.88), transparent);
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transform: skewX(-18deg) translateX(-180%);
+  animation: book-glare 3s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button[href*="loading-booking"]::after,
   .mobile-book a::after {
     animation: none;
   }
