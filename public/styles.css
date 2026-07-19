@@ -814,9 +814,16 @@ h2 em {
 }
 
 .footer-brand {
+  display: inline-block;
+  width: clamp(150px, 15vw, 220px);
+  align-self: start;
   color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.7rem;
+}
+
+.footer-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .site-footer p {
@@ -1463,6 +1470,10 @@ h2 em {
     grid-template-columns: 1fr;
     gap: 22px;
     padding: 44px 18px 90px;
+  }
+
+  .footer-brand {
+    width: 168px;
   }
 
   .mobile-book {
