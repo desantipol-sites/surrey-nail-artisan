@@ -2,18 +2,6 @@ const header = document.querySelector("[data-header]");
 const menuButton = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 
-if (document.documentElement.classList.contains("gradient-preview")) {
-  document.querySelectorAll('a[href]').forEach((link) => {
-    const url = new URL(link.href, window.location.href);
-    const isLocalPage = url.origin === window.location.origin && url.pathname.endsWith(".html");
-
-    if (isLocalPage) {
-      url.searchParams.set("gradient", "1");
-      link.href = url.href;
-    }
-  });
-}
-
 function updateHeader() {
   if (!header) return;
   header.classList.toggle("is-scrolled", window.scrollY > 18);
@@ -47,3 +35,32 @@ if (menuButton && mobileMenu) {
 
 window.addEventListener("scroll", updateHeader, { passive: true });
 updateHeader();
+
+const revealTargets = document.querySelectorAll([
+  ".hero-media",
+  ".work-tile",
+  ".medical-feature-images",
+  ".service-collage",
+  ".studio-photo",
+  ".medical-hero-media",
+  ".environment-grid figure"
+].join(","));
+
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if ("IntersectionObserver" in window && !prefersReducedMotion) {
+  revealTargets.forEach((target) => target.classList.add("image-reveal"));
+
+  const imageObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      imageObserver.unobserve(entry.target);
+    });
+  }, {
+    threshold: 0.14,
+    rootMargin: "0px 0px -5% 0px"
+  });
+
+  revealTargets.forEach((target) => imageObserver.observe(target));
+}
