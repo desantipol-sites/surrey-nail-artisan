@@ -2139,6 +2139,36 @@ h2 {
   border-bottom: 1px solid rgba(29, 33, 30, 0.1);
 }
 
+a.service-item {
+  position: relative;
+  color: inherit;
+  transition: background-color 180ms ease, padding 180ms ease;
+}
+
+a.service-item .service-name::after {
+  display: inline-block;
+  margin-left: 8px;
+  color: var(--taupe);
+  content: "↗";
+  font-size: 0.72rem;
+  opacity: 0.72;
+  transform: translate(0, 0);
+  transition: transform 180ms ease;
+}
+
+a.service-item:hover,
+a.service-item:focus-visible {
+  padding-right: 15px;
+  padding-left: 10px;
+  background: rgba(255, 255, 255, 0.28);
+  outline: none;
+}
+
+a.service-item:hover .service-name::after,
+a.service-item:focus-visible .service-name::after {
+  transform: translate(3px, -3px);
+}
+
 .service-name {
   color: var(--taupe);
   font-size: 0.78rem;
@@ -2433,7 +2463,8 @@ h2 {
   font-size: 0.78rem;
 }
 
-.hands-menu {
+.hands-menu,
+.category-menu {
   background: linear-gradient(180deg, #f0e2d8 0%, #e4ecdf 100%);
 }
 
@@ -2441,11 +2472,13 @@ h2 {
   align-items: start;
 }
 
-.hands-treatment-list {
+.hands-treatment-list,
+.category-treatment-list {
   border-top: 1px solid var(--line);
 }
 
-.hands-treatment-card {
+.hands-treatment-card,
+.category-treatment-card {
   display: grid;
   min-height: 170px;
   grid-template-columns: minmax(220px, 0.72fr) minmax(300px, 1fr) 130px;
@@ -2456,13 +2489,15 @@ h2 {
   transition: background-color 180ms ease, padding 180ms ease;
 }
 
-.hands-treatment-card:hover {
+.hands-treatment-card:hover,
+.category-treatment-card:hover {
   padding-right: 28px;
   padding-left: 28px;
   background: rgba(255, 255, 255, 0.24);
 }
 
-.hands-treatment-heading .card-label {
+.hands-treatment-heading .card-label,
+.category-treatment-heading .card-label {
   margin-bottom: 17px;
   color: var(--taupe);
   font-size: 0.62rem;
@@ -2471,45 +2506,52 @@ h2 {
   text-transform: uppercase;
 }
 
-.hands-treatment-heading h3 {
+.hands-treatment-heading h3,
+.category-treatment-heading h3 {
   margin-bottom: 5px;
   font-size: clamp(1.75rem, 2.5vw, 2.75rem);
   font-weight: 400;
   line-height: 1.05;
 }
 
-.hands-treatment-heading small {
+.hands-treatment-heading small,
+.category-treatment-heading small {
   display: block;
   color: var(--muted);
   font-size: 0.7rem;
 }
 
-.hands-treatment-card > p {
+.hands-treatment-card > p,
+.category-treatment-card > p {
   max-width: 600px;
   margin: 0;
   color: var(--muted);
   font-size: 0.82rem;
 }
 
-.hands-treatment-meta {
+.hands-treatment-meta,
+.category-treatment-meta {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
   gap: 13px;
 }
 
-.hands-treatment-meta span {
+.hands-treatment-meta span,
+.category-treatment-meta span {
   color: var(--muted);
   font-size: 0.72rem;
 }
 
-.hands-treatment-meta strong {
+.hands-treatment-meta strong,
+.category-treatment-meta strong {
   font-family: var(--sans);
   font-size: 1.15rem;
   font-weight: 500;
 }
 
-.hands-menu-cta {
+.hands-menu-cta,
+.category-menu-cta {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2517,7 +2559,8 @@ h2 {
   padding-top: 42px;
 }
 
-.hands-menu-cta p {
+.hands-menu-cta p,
+.category-menu-cta p {
   margin: 0;
   color: var(--muted);
   font-size: 0.78rem;
@@ -2566,6 +2609,22 @@ h2 {
 
 .treatment-results-grid figure:nth-child(3) img {
   object-position: center 54%;
+}
+
+.treatment-results-grid-single {
+  min-height: 680px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.treatment-results-grid-single figure {
+  max-width: 920px;
+  width: 100%;
+  justify-self: center;
+}
+
+.treatment-results-grid-single img {
+  object-position: center;
 }
 
 .treatment-experience {
@@ -2692,7 +2751,8 @@ h2 {
     grid-column: 2;
   }
 
-  .hands-treatment-card {
+  .hands-treatment-card,
+  .category-treatment-card {
     grid-template-columns: minmax(220px, 0.7fr) minmax(0, 1fr) 90px;
     gap: 30px;
   }
@@ -2767,37 +2827,44 @@ h2 {
     font-size: clamp(2.35rem, 9vw, 3.1rem);
   }
 
-  .hands-treatment-card {
+  .hands-treatment-card,
+  .category-treatment-card {
     min-height: 0;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 18px;
     padding: 24px 2px;
   }
 
-  .hands-treatment-card:hover {
+  .hands-treatment-card:hover,
+  .category-treatment-card:hover {
     padding-right: 10px;
     padding-left: 10px;
   }
 
-  .hands-treatment-card > p {
+  .hands-treatment-card > p,
+  .category-treatment-card > p {
     grid-column: 1 / -1;
   }
 
-  .hands-treatment-meta {
+  .hands-treatment-meta,
+  .category-treatment-meta {
     grid-column: 2;
     grid-row: 1;
   }
 
-  .hands-treatment-heading h3 {
+  .hands-treatment-heading h3,
+  .category-treatment-heading h3 {
     font-size: 1.75rem;
   }
 
-  .hands-menu-cta {
+  .hands-menu-cta,
+  .category-menu-cta {
     align-items: stretch;
     flex-direction: column;
   }
 
-  .hands-menu-cta .button {
+  .hands-menu-cta .button,
+  .category-menu-cta .button {
     width: 100%;
   }
 
@@ -2811,6 +2878,12 @@ h2 {
     min-height: 980px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: minmax(480px, 1.35fr) minmax(300px, 0.8fr);
+  }
+
+  .treatment-results-grid-single {
+    min-height: 560px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 
   .treatment-result-main {
@@ -2838,7 +2911,8 @@ h2 {
     gap: 8px;
   }
 
-  .hands-treatment-heading h3 {
+  .hands-treatment-heading h3,
+  .category-treatment-heading h3 {
     font-size: 1.58rem;
   }
 
