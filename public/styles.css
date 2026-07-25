@@ -2068,10 +2068,6 @@ h2 {
   color: #5f675f;
 }
 
-.service-accordion-medical {
-  color: var(--sage-dark);
-}
-
 .service-toggle {
   position: relative;
   width: 28px;
@@ -2145,28 +2141,12 @@ a.service-item {
   transition: background-color 180ms ease, padding 180ms ease;
 }
 
-a.service-item .service-name::after {
-  display: inline-block;
-  margin-left: 8px;
-  color: var(--taupe);
-  content: "↗";
-  font-size: 0.72rem;
-  opacity: 0.72;
-  transform: translate(0, 0);
-  transition: transform 180ms ease;
-}
-
 a.service-item:hover,
 a.service-item:focus-visible {
   padding-right: 15px;
   padding-left: 10px;
   background: rgba(255, 255, 255, 0.28);
   outline: none;
-}
-
-a.service-item:hover .service-name::after,
-a.service-item:focus-visible .service-name::after {
-  transform: translate(3px, -3px);
 }
 
 .service-name {
@@ -2627,6 +2607,16 @@ a.service-item:focus-visible .service-name::after {
   object-position: center;
 }
 
+.treatment-results-grid-two {
+  min-height: 660px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: 1fr;
+}
+
+.treatment-results-grid-two .treatment-result-main {
+  grid-row: auto;
+}
+
 .treatment-experience {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
@@ -2883,6 +2873,12 @@ a.service-item:focus-visible .service-name::after {
   .treatment-results-grid-single {
     min-height: 560px;
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  .treatment-results-grid-two {
+    min-height: 520px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: 1fr;
   }
 
