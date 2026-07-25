@@ -2076,9 +2076,26 @@ h2 {
   position: relative;
   width: 28px;
   height: 28px;
-  border: 1px solid rgba(156, 134, 116, 0.46);
+  border: 1px solid var(--taupe);
   border-radius: 50%;
-  color: var(--taupe);
+  background: var(--taupe);
+  box-shadow: 0 5px 14px rgba(86, 62, 48, 0.18);
+  color: var(--white);
+  transition: background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.service-row:hover .service-toggle,
+.service-row:focus-visible .service-toggle {
+  background: #876f5d;
+  border-color: #876f5d;
+  box-shadow: 0 7px 18px rgba(86, 62, 48, 0.25);
+  transform: translateY(-1px);
+}
+
+.service-accordion[open] .service-toggle {
+  border-color: var(--sage-dark);
+  background: var(--sage-dark);
+  box-shadow: none;
 }
 
 .service-toggle::before,
