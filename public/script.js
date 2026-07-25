@@ -55,7 +55,9 @@ const revealTargets = document.querySelectorAll([
   ".service-collage",
   ".studio-photo",
   ".medical-hero-media",
-  ".environment-grid figure"
+  ".environment-grid figure",
+  ".treatment-hero-media",
+  ".treatment-results-grid figure"
 ].join(","));
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
