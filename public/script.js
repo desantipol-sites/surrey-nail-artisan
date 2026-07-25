@@ -33,6 +33,18 @@ if (menuButton && mobileMenu) {
   });
 }
 
+const serviceAccordions = document.querySelectorAll(".service-accordion");
+
+serviceAccordions.forEach((accordion) => {
+  accordion.addEventListener("toggle", () => {
+    if (!accordion.open) return;
+
+    serviceAccordions.forEach((otherAccordion) => {
+      if (otherAccordion !== accordion) otherAccordion.open = false;
+    });
+  });
+});
+
 window.addEventListener("scroll", updateHeader, { passive: true });
 updateHeader();
 
