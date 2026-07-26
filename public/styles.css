@@ -767,17 +767,21 @@ h2 em {
 }
 
 .studio-values article {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 18px;
   padding-top: 18px;
   border-top: 1px solid var(--line);
 }
 
 .studio-values h3 {
-  margin: 22px 0 12px;
+  margin: 0 0 7px;
   font-size: 1.2rem;
   font-weight: 500;
 }
 
 .studio-values p {
+  margin: 0;
   color: var(--muted);
   font-size: 0.8rem;
 }
@@ -1687,11 +1691,11 @@ h2 em {
 }
 
 .medical-feature {
-  background: linear-gradient(180deg, #f1e2d7 0%, #d9e6d4 100%);
+  background: linear-gradient(180deg, #d9e6d4 0%, #f0e2d8 100%);
 }
 
 .services {
-  background: linear-gradient(180deg, #d9e6d4 0%, #f0e2d8 100%);
+  background: linear-gradient(180deg, #f1e2d7 0%, #d9e6d4 100%);
 }
 
 .private-studio {
@@ -1773,10 +1777,6 @@ h2 {
   margin: 0;
   color: var(--taupe);
   font-size: 0.72rem;
-}
-
-.studio-values h3 {
-  margin-top: 18px;
 }
 
 .expect-steps li {
