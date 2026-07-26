@@ -2022,6 +2022,15 @@ h2 {
   left: 5%;
 }
 
+.real-medical-hero figcaption {
+  left: clamp(24px, 3vw, 36px);
+}
+
+.medical-image-main .image-note {
+  z-index: 5;
+  white-space: nowrap;
+}
+
 /* One-time image reveal */
 .image-reveal {
   opacity: 0;
@@ -2074,6 +2083,10 @@ h2 {
 
   .home-hero .hero-media figcaption {
     left: 30px;
+  }
+
+  .real-medical-hero figcaption {
+    left: 36px;
   }
 
   .home-footer {
