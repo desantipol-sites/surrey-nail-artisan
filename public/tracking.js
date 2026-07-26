@@ -7,6 +7,14 @@
     window.dataLayer.push(arguments);
   };
 
+  const googleAdsTag = document.createElement("script");
+  googleAdsTag.async = true;
+  googleAdsTag.src = "https://www.googletagmanager.com/gtag/js?id=AW-17380308355";
+  document.head.appendChild(googleAdsTag);
+
+  window.gtag("js", new Date());
+  window.gtag("config", "AW-17380308355");
+
   (function (windowObject, documentObject, tagName, dataLayerName, containerId) {
     windowObject[dataLayerName] = windowObject[dataLayerName] || [];
     windowObject[dataLayerName].push({
