@@ -374,7 +374,7 @@ h2 em {
 }
 
 .trust-strip-wide {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .trust-strip p {
@@ -1147,12 +1147,16 @@ h2 em {
 
 .treatment-card > .treatment-price-lines {
   display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr);
   align-items: stretch;
+  justify-content: stretch;
   gap: 0;
 }
 
 .treatment-price-lines p {
   display: flex;
+  width: 100%;
   align-items: baseline;
   justify-content: space-between;
   gap: 16px;
@@ -1169,6 +1173,53 @@ h2 em {
 }
 
 .treatment-price-lines p strong {
+  white-space: nowrap;
+  font-size: 1.05rem;
+}
+
+.treatment-card > .treatment-price-groups {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  justify-content: stretch;
+  gap: clamp(20px, 3vw, 42px);
+}
+
+.treatment-price-group {
+  min-width: 0;
+}
+
+.treatment-price-group p {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+  padding: 7px 0;
+}
+
+.treatment-price-group p + p {
+  border-top: 1px solid rgba(23, 38, 31, 0.12);
+}
+
+.treatment-price-group .price-group-label {
+  display: block;
+  padding-top: 0;
+  color: var(--taupe);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.treatment-price-group p span {
+  color: var(--muted);
+  font-size: 0.7rem;
+}
+
+.treatment-price-group p strong {
   white-space: nowrap;
   font-size: 1.05rem;
 }
@@ -1704,7 +1755,16 @@ h2 em {
     margin-top: 10px;
   }
 
+  .treatment-card > .treatment-price-groups {
+    margin-top: 12px;
+    gap: 20px;
+  }
+
   .treatment-price-lines p {
+    padding: 5px 0;
+  }
+
+  .treatment-price-group p {
     padding: 5px 0;
   }
 
