@@ -838,83 +838,8 @@ h2 em {
 }
 
 .footer-links a:hover,
-.footer-links a:focus-visible,
-.cookie-settings-link:hover,
-.cookie-settings-link:focus-visible {
+.footer-links a:focus-visible {
   color: var(--ink);
-}
-
-.cookie-settings-link {
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  text-align: left;
-  cursor: pointer;
-}
-
-.cookie-consent {
-  position: fixed;
-  z-index: 120;
-  right: 24px;
-  bottom: 24px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: end;
-  gap: 24px;
-  width: min(620px, calc(100vw - 48px));
-  padding: 24px;
-  border: 1px solid rgba(245, 243, 236, 0.22);
-  border-radius: 22px;
-  background: rgba(23, 56, 47, 0.97);
-  color: var(--cream);
-  box-shadow: 0 22px 60px rgba(17, 31, 26, 0.24);
-  backdrop-filter: blur(16px);
-}
-
-.cookie-consent[hidden] {
-  display: none;
-}
-
-.cookie-consent strong {
-  display: block;
-  margin-bottom: 7px;
-  font-size: 0.86rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.cookie-consent p {
-  max-width: 470px;
-  margin: 0;
-  color: rgba(245, 243, 236, 0.82);
-  font-size: 0.88rem;
-  line-height: 1.5;
-}
-
-.cookie-consent-actions {
-  display: flex;
-  gap: 8px;
-}
-
-.cookie-consent-actions button {
-  min-height: 42px;
-  padding: 0 18px;
-  border: 1px solid rgba(245, 243, 236, 0.48);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--cream);
-  font: 600 0.72rem/1 "DM Sans", sans-serif;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.cookie-consent-actions .cookie-consent-accept {
-  border-color: var(--cream);
-  background: var(--cream);
-  color: var(--medical);
 }
 
 .mobile-book {
@@ -1730,26 +1655,6 @@ h2 em {
   .service-price {
     grid-column: 2;
     justify-self: start;
-  }
-}
-
-@media (max-width: 640px) {
-  .cookie-consent {
-    right: 12px;
-    bottom: 84px;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    width: calc(100vw - 24px);
-    padding: 20px;
-    border-radius: 18px;
-  }
-
-  .cookie-consent-actions {
-    width: 100%;
-  }
-
-  .cookie-consent-actions button {
-    flex: 1;
   }
 }
 
