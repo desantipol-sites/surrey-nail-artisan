@@ -494,6 +494,7 @@ h2 em {
 }
 
 .medical-image-main {
+  position: relative;
   margin: 0;
 }
 
@@ -691,6 +692,10 @@ h2 em {
   object-position: 50% 66%;
 }
 
+.service-collage-main {
+  position: relative;
+}
+
 .service-collage-detail {
   position: absolute;
   right: 0;
@@ -835,10 +840,53 @@ h2 em {
   margin-bottom: 4px;
 }
 
+.home-footer {
+  grid-template-columns: minmax(160px, 0.7fr) minmax(320px, 1.6fr) auto;
+  align-items: start;
+}
+
+.home-footer .footer-credentials {
+  max-width: 760px;
+  justify-self: end;
+  line-height: 1.65;
+  text-align: right;
+}
+
+.home-footer .footer-credentials p {
+  margin: 0;
+}
+
+.home-footer .footer-signature {
+  margin-top: 10px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1rem;
+}
+
 .footer-links {
   display: flex;
   flex-direction: column;
   gap: 7px;
+}
+
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.instagram-icon {
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+.instagram-icon-dot {
+  fill: currentColor;
+  stroke: none;
 }
 
 .footer-links a:hover,
@@ -1915,6 +1963,30 @@ h2 {
     right: auto;
     left: 12px;
     bottom: 12px;
+  }
+
+  .home-hero .hero-media figcaption {
+    left: 30px;
+  }
+
+  .home-footer {
+    grid-template-columns: 92px minmax(0, 1fr);
+    align-items: start;
+    gap: 18px;
+  }
+
+  .home-footer .footer-brand {
+    width: 92px;
+  }
+
+  .home-footer .footer-credentials {
+    align-self: start;
+    font-size: 0.7rem;
+    line-height: 1.55;
+  }
+
+  .home-footer .footer-links {
+    justify-content: flex-end;
   }
 
   .mobile-book a {
