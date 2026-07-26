@@ -1139,6 +1139,40 @@ h2 em {
   font-weight: 600;
 }
 
+.treatment-card > .treatment-note {
+  margin-top: 10px;
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
+.treatment-card > .treatment-price-lines {
+  display: grid;
+  align-items: stretch;
+  gap: 0;
+}
+
+.treatment-price-lines p {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0;
+  padding: 7px 0;
+}
+
+.treatment-price-lines p + p {
+  border-top: 1px solid rgba(23, 38, 31, 0.12);
+}
+
+.treatment-price-lines p span {
+  font-size: 0.7rem;
+}
+
+.treatment-price-lines p strong {
+  white-space: nowrap;
+  font-size: 1.05rem;
+}
+
 .treatment-card > a {
   margin-top: 18px;
   border-bottom: 1px solid currentColor;
@@ -1659,6 +1693,19 @@ h2 em {
   .treatment-card > div {
     margin-top: 14px;
     padding-top: 0;
+  }
+
+  .treatment-card > .treatment-note {
+    margin-top: 7px;
+    font-size: 0.66rem;
+  }
+
+  .treatment-card > .treatment-price-lines {
+    margin-top: 10px;
+  }
+
+  .treatment-price-lines p {
+    padding: 5px 0;
   }
 
   .treatment-card > a {
