@@ -1,5 +1,4 @@
-# Temporary preview protection. Replace Disallow with Allow when the custom domain goes live.
 User-agent: *
-Disallow: /
+Allow: /
 
 Sitemap: https://www.surreynailartisan.co.uk/sitemap.xml
