@@ -1,0 +1,55 @@
+# Previous Webflow category pages
+/prices/hands-treatment /hands-treatment 301
+/prices/feet-treatment /feet-treatment 301
+/prices/hands-feet-packages /hands-feet-packages 301
+/prices/pedicure-kart /kart-pedicure 301
+/prices/eyelash-eyebrows /eyelash-eyebrows 301
+/prices/lash-lift /lash-lift 301
+/prices/medical-pedicure /medical-pedicure 301
+
+# Previous manicure treatment pages
+/procedure/file-polish /hands-treatment 301
+/procedure/classic-manicure /hands-treatment 301
+/procedure/ibx-classic-manicure /hands-treatment 301
+/procedure/gel-manicure-with-app /hands-treatment 301
+/procedure/gel-manicure-without /hands-treatment 301
+
+# Previous pedicure treatment pages
+/procedure/classic-pedicure /feet-treatment 301
+/procedure/gel-pedicure /feet-treatment 301
+/procedure/gel-removal-classic-pedicure-nonew /feet-treatment 301
+/procedure/luxury-pedicure /feet-treatment 301
+/procedure/luxury-pedicure-with-colour /feet-treatment 301
+
+# Previous package and men's treatment pages
+/procedure/classic-manicure-pedicure /hands-feet-packages 301
+/procedure/gel-manicure-classic-pedicure /hands-feet-packages 301
+/procedure/classic-manicure-gel-pedicure /hands-feet-packages 301
+/procedure/gel-manicure-gel-pedicure /hands-feet-packages 301
+/procedure/male-classic-pedicure /male-hands-feet-treatment 301
+/procedure/male-manicure-pedicure /male-hands-feet-treatment 301
+
+# Previous KART treatment pages
+/procedure/kart-pedicure /kart-pedicure 301
+/procedure/kart-pedicure-colour /kart-pedicure 301
+/procedure/callus-peel /kart-pedicure 301
+
+# Previous eyebrow, eyelash and lash-lift pages
+/procedure/eyebrow-shape /eyelash-eyebrows 301
+/procedure/eyebrow-shape-tint /eyelash-eyebrows 301
+/procedure/eyebrow-tint /eyelash-eyebrows 301
+/procedure/eyelash-eyebrow-tint /eyelash-eyebrows 301
+/procedure/eyelash-tint /eyelash-eyebrows 301
+/procedure/lvl-enhance-eyebrows /eyelash-eyebrows 301
+/procedure/lvl-enhance-lash-lift /lash-lift 301
+/procedure/lvl-enhance-lashlift-eyebrow /lash-lift 301
+
+# Previous medical-pedicure treatment pages
+/procedure/cut-toenails-after-consultation /medical-pedicure 301
+/procedure/diabetic-foot-assessment /medical-pedicure 301
+/procedure/ingrowing-nail-post-surgery-assessment /medical-pedicure 301
+/procedure/initial-consultation-routine-treatment /medical-pedicure 301
+/procedure/verruca-treatment-per-session /medical-pedicure 301
+
+# Preserve old booking links
+/loading-booking https://book.gettimely.com/richmondbeautytherapist/book/embed?location=288017&staff=665857&client-login=true 302
