@@ -1,4 +1,6 @@
 (function () {
+  const googleAnalyticsId = "G-1BQGQD94CP";
+  const googleAdsId = "AW-17380308355";
   const googleAdsConversion = "AW-17380308355/evoYCIjej_YaEIPryd9A";
   const googleTagManagerId = "GTM-N6DVTSQR";
 
@@ -7,13 +9,14 @@
     window.dataLayer.push(arguments);
   };
 
-  const googleAdsTag = document.createElement("script");
-  googleAdsTag.async = true;
-  googleAdsTag.src = "https://www.googletagmanager.com/gtag/js?id=AW-17380308355";
-  document.head.appendChild(googleAdsTag);
+  const googleTag = document.createElement("script");
+  googleTag.async = true;
+  googleTag.src = `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`;
+  document.head.appendChild(googleTag);
 
   window.gtag("js", new Date());
-  window.gtag("config", "AW-17380308355");
+  window.gtag("config", googleAnalyticsId);
+  window.gtag("config", googleAdsId);
 
   (function (windowObject, documentObject, tagName, dataLayerName, containerId) {
     windowObject[dataLayerName] = windowObject[dataLayerName] || [];
@@ -50,12 +53,20 @@
   document.addEventListener("DOMContentLoaded", function () {
     document.addEventListener("click", function (event) {
       const bookingLink = event.target.closest(
-        'a[href*="book.gettimely.com"], a[href*="/loading-booking"]'
+        'a[data-book], a[href*="book.gettimely.com"], a[href*="bookings.gettimely.com"], a[href*="/loading-booking"]'
       );
       if (!bookingLink || event.defaultPrevented) return;
       if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
 
       event.preventDefault();
+      window.gtag("event", "book_appointment_click", {
+        send_to: googleAnalyticsId,
+        booking_location: "Hampton",
+        booking_url: bookingLink.href,
+        link_url: bookingLink.href,
+        link_text: bookingLink.textContent.trim(),
+        page_path: window.location.pathname
+      });
       window.gtag_report_conversion(bookingLink.href);
     }, { capture: true });
   });

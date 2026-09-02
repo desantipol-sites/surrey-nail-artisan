@@ -511,16 +511,23 @@ Booking conversion destination:
 AW-17380308355/evoYCIjej_YaEIPryd9A
 ```
 
-The existing GA4 configuration remains managed through the existing Google Tag Manager container.
+Google Analytics 4 measurement ID:
+
+```text
+G-1BQGQD94CP
+```
+
+GA4 is configured directly by `public/tracking.js`. The existing Google Tag Manager container remains loaded for its other tags, but it is not the source of the GA4 page tracking.
 
 Do not import or recreate the previous broken booking conversion.
 
 Current conversion behaviour:
 
-1. A visitor clicks any link whose address contains `book.gettimely.com` or `/loading-booking`.
+1. A visitor clicks any link whose address contains `book.gettimely.com`, `bookings.gettimely.com` or `/loading-booking`.
 2. `tracking.js` prevents immediate navigation.
-3. `gtag` sends the Google Ads conversion event.
-4. The browser continues to Timely after the event callback or a short timeout.
+3. `gtag` sends the GA4 event `book_appointment_click` to `G-1BQGQD94CP`, with the booking location, destination URL, link text and originating page path.
+4. `gtag` sends the separate Google Ads conversion event.
+5. The browser continues to Timely after the Google Ads event callback or a short timeout.
 
 The conversion fallback timeout is approximately 1.3 seconds.
 
